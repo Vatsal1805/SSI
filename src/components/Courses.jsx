@@ -106,7 +106,7 @@ export default function Courses() {
   const course = coursesData[activeTab];
 
   return (
-    <section className="bg-[#ffffff] border-b border-[#334155] py-16 md:py-24 px-5 md:px-6 relative">
+    <section className="bg-bg-light border-b border-[#334155] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1280px] mx-auto text-center">
         
         {/* Section Label */}
@@ -135,7 +135,7 @@ export default function Courses() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`relative font-space font-medium text-sm rounded-lg py-2.5 px-5 transition-all duration-200 focus:outline-none border ${
                     isActive 
-                      ? 'text-[#ffffff] border-[#f97316]' 
+                      ? 'text-[#ffffff] border-[#f97316] z-10' 
                       : 'text-[#475569] border-[#e2e8f0] hover:border-[#cbd5e1] hover:text-[#0f172a] bg-[#f8fafc]'
                   }`}
                 >
@@ -143,11 +143,11 @@ export default function Courses() {
                   {isActive && (
                     <motion.div
                       layoutId="activeTabBg"
-                      className="absolute inset-0 bg-[#f97316] rounded-[7px] -z-10"
+                      className="absolute inset-0 bg-[#f97316] rounded-[7px] z-0"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
-                  {tab.label}
+                  <span className="relative z-10">{tab.label}</span>
                 </button>
               );
             })}

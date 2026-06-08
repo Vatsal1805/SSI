@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import StatsBar from './components/StatsBar';
+import AboutUs from './components/AboutUs';
 import Courses from './components/Courses';
 import Faculty from './components/Faculty';
 import Toppers from './components/Toppers';
@@ -24,6 +25,11 @@ function App() {
       
       {/* Stats strip below Hero */}
       <StatsBar />
+      
+      {/* About Us Section */}
+      <div id="about-us">
+        <AboutUs />
+      </div>
       
       {/* Courses Academic Section */}
       <div id="courses">
@@ -54,9 +60,9 @@ function App() {
       </div>
       
       {/* Admissions Countdown & Schedule */}
-      <div id="admissions">
+      {/* <div id="admissions">
         <Admissions />
-      </div>
+      </div> */}
       
       {/* Branches Locations Section */}
       <div id="branches">

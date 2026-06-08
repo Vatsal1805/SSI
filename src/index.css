@@ -19,13 +19,13 @@ html {
   --border-subtle: #334155;
 
   /* Light section tokens */
-  --bg-light: #ffffff;
-  --bg-light-card: #f8fafc;
-  --bg-light-card-hover: #f1f5f9;
+  --bg-light: #faf9f6;
+  --bg-light-card: #f4f3ee;
+  --bg-light-card-hover: #eae8de;
   --text-on-light-primary: #0f172a;
   --text-on-light-secondary: #475569;
   --text-on-light-muted: #94a3b8;
-  --border-light: #e2e8f0;
+  --border-light: #e6e4dc;
   --border-light-hover: #cbd5e1;
 }
 
@@ -61,4 +61,22 @@ body {
   .hero-headline {
     font-size: clamp(40px, 6vw, 72px);
   }
+}
+
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-mesh {
+  background-size: 200% 200%;
+  animation: gradient-flow 25s ease infinite;
+  will-change: background-position;
 }

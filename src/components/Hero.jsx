@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { MeshGradient } from "@paper-design/shaders-react";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 const containerVariants = {
   hidden: {},
@@ -17,28 +17,22 @@ const itemVariants = {
 };
 
 export default function Hero() {
-  const [isMobile, setIsMobile] = useState(false);
+  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const checkMobile = () => {
-      // Check for mobile screens or touch devices which might struggle with WebGL
-      setIsMobile(window.innerWidth < 768 || (navigator.maxTouchPoints && navigator.maxTouchPoints > 0));
-    };
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+  // Track if the Hero is in view
+  const isInView = useInView(sectionRef, { margin: "0px 0px -100px 0px" });
 
   return (
     <section
+      ref={sectionRef}
       id="home"
       className="relative min-h-screen w-full overflow-hidden flex flex-col items-center justify-center pt-28 pb-16"
     >
 
-      {/* LAYER 1 — Shader / CSS fallback background */}
-      <div className="absolute inset-0 overflow-hidden z-0">
+      {/* LAYER 1 — High-Performance WebGL Shader (Active only when visible) / CSS Fallback */}
+      <div className="absolute inset-0 overflow-hidden z-0 bg-[#0f172a]">
         <div className="absolute inset-0 w-full h-full">
-          {!isMobile ? (
+          {isInView ? (
             <MeshGradient
               style={{ 
                 height: "100%", 
@@ -47,9 +41,9 @@ export default function Hero() {
                 willChange: "transform",
                 backfaceVisibility: "hidden"
               }}
-              distortion={0.4}
-              swirl={0.15}
-              speed={0.5}
+              distortion={0.35}
+              swirl={0.12}
+              speed={0.4}
               colors={[
                 "#0f172a",
                 "#1e3a5f",
@@ -60,7 +54,18 @@ export default function Hero() {
               ]}
             />
           ) : (
-            <div className="w-full h-full bg-[#0f172a] bg-gradient-to-tr from-[#0f172a] via-[#162844] to-[#1e3a5f] opacity-90" />
+            <div 
+              className="absolute inset-0 w-full h-full opacity-65 pointer-events-none animate-mesh"
+              style={{
+                backgroundImage: `
+                  radial-gradient(at 0% 0%, rgba(30, 58, 95, 0.6) 0px, transparent 50%),
+                  radial-gradient(at 100% 0%, rgba(22, 40, 68, 0.6) 0px, transparent 50%),
+                  radial-gradient(at 100% 100%, rgba(26, 47, 74, 0.6) 0px, transparent 50%),
+                  radial-gradient(at 0% 100%, rgba(12, 25, 41, 0.7) 0px, transparent 50%),
+                  radial-gradient(at 50% 50%, rgba(30, 58, 95, 0.4) 0px, transparent 50%)
+                `
+              }}
+            />
           )}
         </div>
       </div>

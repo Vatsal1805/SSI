@@ -70,7 +70,7 @@ export default function Faculty() {
               variants={cardVariants}
               whileHover={{ y: -8 }}
               transition={{ duration: 0.2 }}
-              className="group bg-bg-card border border-transparent hover:border-[#f97316] rounded-xl p-7 flex flex-col items-center text-center transition-all duration-300 will-change-transform"
+              className="group bg-bg-card border border-transparent hover:border-[#f97316] rounded-xl p-7 flex flex-col items-center text-center transition-[border-color,box-shadow,background-color] duration-300 will-change-transform"
               style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}
             >
               {/* Profile Photo - 100px circle */}

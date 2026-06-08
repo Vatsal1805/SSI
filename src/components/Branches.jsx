@@ -29,7 +29,7 @@ const branches = [
 
 export default function Branches() {
   return (
-    <section className="bg-[#ffffff] py-16 md:py-24 px-5 md:px-6 relative border-b border-[#334155]">
+    <section className="bg-bg-light py-16 md:py-24 px-5 md:px-6 relative border-b border-[#334155]">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-16">
           {/* Section Label */}
@@ -53,7 +53,7 @@ export default function Branches() {
           {branches.map((branch) => (
             <div
               key={branch.badge}
-              className="bg-[#f8fafc] border border-[#e2e8f0] rounded-xl p-6 md:p-8 flex flex-col hover:shadow-lg hover:border-[#f97316] transition-all duration-300"
+              className="bg-bg-light-card border border-border-light rounded-xl p-6 md:p-8 flex flex-col hover:shadow-lg hover:border-[#f97316] transition-all duration-300"
               style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.03)' }}
             >
               {/* Branch Badge */}
@@ -67,7 +67,7 @@ export default function Branches() {
               </h3>
 
               {/* Divider */}
-              <div className="w-full border-t border-[#e2e8f0] mb-6" />
+              <div className="w-full border-t border-border-light mb-6" />
 
               {/* Details Rows */}
               <div className="flex flex-col gap-4 text-left mb-8">
@@ -112,7 +112,7 @@ export default function Branches() {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex border border-[#e2e8f0] hover:border-[#f97316] hover:bg-[#fff7ed] text-[#f97316] font-space font-medium text-sm rounded-lg py-2.5 px-5 transition-all duration-200"
+                  className="inline-flex border border-border-light hover:border-[#f97316] hover:bg-[#fff7ed] text-[#f97316] font-space font-medium text-sm rounded-lg py-2.5 px-5 transition-[border-color,background-color,color] duration-200"
                 >
                   View on Google Maps →
                 </motion.a>
