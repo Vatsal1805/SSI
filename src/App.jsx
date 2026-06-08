@@ -20,9 +20,7 @@ function App() {
       <Navbar />
       
       {/* Home (Hero Section) */}
-      <div id="home">
-        <Hero />
-      </div>
+      <Hero />
       
       {/* Stats strip below Hero */}
       <StatsBar />

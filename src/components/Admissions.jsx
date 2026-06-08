@@ -36,7 +36,7 @@ export default function Admissions() {
   }, []);
 
   return (
-    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative border-t border-border-subtle/20">
+    <section className="bg-bg-primary border-b border-[#e2e8f0] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-16">
           {/* Section Label */}
@@ -74,9 +74,12 @@ export default function Admissions() {
               ].map((box) => (
                 <div 
                   key={box.label}
-                  className="bg-bg-card border border-border-subtle rounded-lg p-4 md:py-5 md:px-4 flex flex-col items-center justify-center shadow-lg shadow-black/10"
+                  className="bg-bg-card border border-border-subtle border-t-[3px] border-t-accent-orange rounded-lg p-4 md:py-5 md:px-4 flex flex-col items-center justify-center shadow-lg shadow-black/10"
                 >
-                  <span className="font-space font-bold text-3xl md:text-4xl text-accent-orange leading-none mb-1">
+                  <span 
+                    className="font-space font-bold text-3xl md:text-4xl text-accent-orange leading-none mb-1"
+                    style={{ textShadow: '0 0 30px rgba(249,115,22,0.5)' }}
+                  >
                     {String(box.value).padStart(2, '0')}
                   </span>
                   <span className="font-space font-normal text-[10px] md:text-[11px] text-text-muted uppercase tracking-wider">

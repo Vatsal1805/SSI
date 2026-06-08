@@ -38,7 +38,7 @@ export default function Faculty() {
   const isInView = useInView(containerRef, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative">
+    <section className="bg-bg-primary border-b border-[#e2e8f0] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1280px] mx-auto text-center">
         
         {/* Section Label */}
@@ -64,28 +64,29 @@ export default function Faculty() {
           animate={isInView ? 'visible' : 'hidden'}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
         >
-          {facultyData.map((mentor, index) => (
+          {facultyData.map((mentor) => (
             <motion.div
               key={mentor.name}
               variants={cardVariants}
-              whileHover={{ y: -6, borderColor: '#f97316' }}
+              whileHover={{ y: -8 }}
               transition={{ duration: 0.2 }}
-              className="bg-bg-card border border-border-subtle rounded-xl p-6 flex flex-col items-center text-center shadow-lg shadow-black/10 transition-colors duration-200"
+              className="group bg-bg-card border border-transparent hover:border-[#f97316] rounded-xl p-7 flex flex-col items-center text-center transition-all duration-300 will-change-transform"
+              style={{ boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}
             >
-              {/* Profile Photo */}
+              {/* Profile Photo - 100px circle */}
               <Avatar
                 src={mentor.image}
                 name={mentor.name}
-                sizeClass="w-20 h-20"
-                textClass="text-lg font-semibold"
-                borderClass="border-2 border-border-subtle"
+                sizeClass="w-[100px] h-[100px]"
+                textClass="text-xl font-semibold"
+                borderClass="border-[3px] border-[#1e293b] group-hover:border-[#f97316] transition-all duration-300"
                 fallbackBg="bg-bg-primary"
                 fallbackText="text-accent-orange"
-                className="mb-4"
+                className="mb-4 border-[3px] border-[#1e293b] group-hover:border-[#f97316] transition-all duration-300"
               />
 
               {/* Name */}
-              <h3 className="font-space font-semibold text-text-primary text-[16px] leading-tight mb-2">
+              <h3 className="font-space font-semibold text-text-primary text-[17px] leading-tight mb-2">
                 {mentor.name}
               </h3>
 

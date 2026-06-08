@@ -22,7 +22,7 @@ export default function Toppers() {
   const [activeTab, setActiveTab] = useState('board');
 
   return (
-    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative border-t border-border-subtle/20">
+    <section className="bg-[#ffffff] py-16 md:py-24 px-5 md:px-6 relative border-b border-[#334155]">
       <div className="max-w-[1280px] mx-auto text-center">
         
         {/* Section Label */}
@@ -31,7 +31,7 @@ export default function Toppers() {
         </span>
 
         {/* Section Heading */}
-        <h2 className="font-space font-bold text-text-primary text-[clamp(28px,4vw,44px)] leading-tight mb-8">
+        <h2 className="font-space font-bold text-[#0f172a] text-[clamp(28px,4vw,44px)] leading-tight mb-8">
           Our Toppers
         </h2>
 
@@ -41,8 +41,8 @@ export default function Toppers() {
             onClick={() => setActiveTab('board')}
             className={`font-space font-medium text-xs md:text-sm tracking-wider uppercase py-2.5 px-6 rounded-lg transition-colors border duration-200 ${
               activeTab === 'board'
-                ? 'bg-accent-orange border-accent-orange text-bg-primary font-semibold'
-                : 'bg-transparent border-border-subtle text-text-muted hover:border-text-muted hover:text-text-secondary'
+                ? 'bg-[#f97316] border-[#f97316] text-[#ffffff] font-semibold'
+                : 'bg-[#f1f5f9] border-[#e2e8f0] text-[#475569] hover:border-[#cbd5e1] hover:text-[#0f172a]'
             }`}
           >
             12th Science 2026
@@ -52,8 +52,8 @@ export default function Toppers() {
             onClick={() => setActiveTab('competitive')}
             className={`font-space font-medium text-xs md:text-sm tracking-wider uppercase py-2.5 px-6 rounded-lg transition-colors border duration-200 ${
               activeTab === 'competitive'
-                ? 'bg-accent-orange border-accent-orange text-bg-primary font-semibold'
-                : 'bg-transparent border-border-subtle text-text-muted hover:border-text-muted hover:text-text-secondary'
+                ? 'bg-[#f97316] border-[#f97316] text-[#ffffff] font-semibold'
+                : 'bg-[#f1f5f9] border-[#e2e8f0] text-[#475569] hover:border-[#cbd5e1] hover:text-[#0f172a]'
             }`}
           >
             JEE / NEET 2026
@@ -72,51 +72,59 @@ export default function Toppers() {
                 transition={{ duration: 0.3 }}
                 className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6"
               >
-                {boardToppers.map((topper) => (
-                  <div
-                    key={topper.name}
-                    className="relative bg-bg-card border border-border-subtle rounded-xl p-5 md:py-6 md:px-5 flex flex-col items-center text-center shadow-lg shadow-black/10 hover:border-accent-orange/60 transition-all duration-200"
-                  >
-                    {/* Rank Badge */}
-                    {topper.rank && (
-                      <span className="absolute top-3 right-3 bg-accent-orange text-bg-primary font-space font-bold text-[9px] md:text-[10px] px-2 py-0.5 rounded tracking-wide uppercase leading-none shadow-sm z-10">
-                        {topper.rank}
+                {boardToppers.map((topper, index) => {
+                  const isTop2 = index < 2;
+                  return (
+                    <div
+                      key={topper.name}
+                      className="group relative border border-[#e2e8f0] hover:border-[#f97316] rounded-xl p-5 md:py-6 md:px-5 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 will-change-transform"
+                      style={
+                        isTop2 
+                          ? { background: 'linear-gradient(135deg, #fff7ed 0%, #f8fafc 100%)', boxShadow: '0 8px 32px rgba(0,0,0,0.03)' }
+                          : { background: '#f8fafc' }
+                      }
+                    >
+                      {/* Rank Badge */}
+                      {topper.rank && (
+                        <span className="absolute top-3 right-3 bg-accent-orange text-white font-space font-bold text-[9px] md:text-[10px] px-2 py-0.5 rounded tracking-wide uppercase leading-none shadow-sm z-10">
+                          {topper.rank}
+                        </span>
+                      )}
+
+                      {/* Photo */}
+                      <Avatar
+                        src={topper.image}
+                        name={topper.name}
+                        sizeClass="w-[72px] h-[72px]"
+                        textClass="text-base font-semibold"
+                        borderClass="border-2 border-[#e2e8f0] group-hover:border-[#f97316] transition-colors duration-300"
+                        fallbackBg="bg-accent-orange"
+                        fallbackText="text-bg-primary"
+                        className="mb-4 border-2 border-[#e2e8f0] group-hover:border-[#f97316] transition-colors duration-300"
+                      />
+
+                      {/* Name */}
+                      <h3 className="font-space font-semibold text-[#0f172a] text-[15px] leading-snug mb-1">
+                        {topper.name}
+                      </h3>
+
+                      {/* Exam Name */}
+                      <p className="font-space text-[#94a3b8] text-xs mb-4">
+                        {topper.exam}
+                      </p>
+
+                      {/* Score */}
+                      <span className="font-space font-bold text-[clamp(22px,3vw,28px)] text-accent-orange leading-none mt-auto block">
+                        {topper.score}
                       </span>
-                    )}
 
-                    {/* Photo */}
-                    <Avatar
-                      src={topper.image}
-                      name={topper.name}
-                      sizeClass="w-[72px] h-[72px]"
-                      textClass="text-base font-semibold"
-                      borderClass="border-2 border-border-subtle"
-                      fallbackBg="bg-accent-orange"
-                      fallbackText="text-bg-primary"
-                      className="mb-4"
-                    />
-
-                    {/* Name */}
-                    <h3 className="font-space font-semibold text-text-primary text-[15px] leading-snug mb-1">
-                      {topper.name}
-                    </h3>
-
-                    {/* Exam Name */}
-                    <p className="font-space text-text-muted text-xs mb-4">
-                      {topper.exam}
-                    </p>
-
-                    {/* Score */}
-                    <span className="font-space font-bold text-[clamp(22px,3vw,28px)] text-accent-orange leading-none mt-auto block">
-                      {topper.score}
-                    </span>
-
-                    {/* Score Label */}
-                    <span className="font-space font-normal text-[10px] text-text-muted uppercase tracking-wider block mt-1 leading-none">
-                      {topper.label}
-                    </span>
-                  </div>
-                ))}
+                      {/* Score Label */}
+                      <span className="font-space font-normal text-[10px] text-[#94a3b8] uppercase tracking-wider block mt-1 leading-none">
+                        {topper.label}
+                      </span>
+                    </div>
+                  );
+                })}
               </motion.div>
             ) : (
               <motion.div
@@ -132,7 +140,7 @@ export default function Toppers() {
                   {competitiveToppers.map((topper) => (
                     <div
                       key={topper.name}
-                      className="bg-bg-card border border-border-subtle rounded-xl p-5 md:py-6 md:px-5 flex flex-col items-center text-center shadow-lg shadow-black/10 hover:border-accent-orange/60 transition-all duration-200 mx-auto w-full"
+                      className="group relative bg-[#f8fafc] border border-[#e2e8f0] hover:border-[#f97316] rounded-xl p-5 md:py-6 md:px-5 flex flex-col items-center text-center hover:shadow-lg hover:-translate-y-1 transition-all duration-300 will-change-transform mx-auto w-full"
                     >
                       {/* Photo */}
                       <Avatar
@@ -140,19 +148,19 @@ export default function Toppers() {
                         name={topper.name}
                         sizeClass="w-[72px] h-[72px]"
                         textClass="text-base font-semibold"
-                        borderClass="border-2 border-border-subtle"
+                        borderClass="border-2 border-[#e2e8f0] group-hover:border-[#f97316] transition-colors duration-300"
                         fallbackBg="bg-accent-orange"
                         fallbackText="text-bg-primary"
-                        className="mb-4"
+                        className="mb-4 border-2 border-[#e2e8f0] group-hover:border-[#f97316] transition-colors duration-300"
                       />
 
                       {/* Name */}
-                      <h3 className="font-space font-semibold text-text-primary text-[15px] leading-snug mb-1">
+                      <h3 className="font-space font-semibold text-[#0f172a] text-[15px] leading-snug mb-1">
                         {topper.name}
                       </h3>
 
                       {/* Exam */}
-                      <p className="font-space text-text-muted text-xs mb-4">
+                      <p className="font-space text-[#94a3b8] text-xs mb-4">
                         {topper.exam}
                       </p>
 
@@ -162,14 +170,14 @@ export default function Toppers() {
                       </span>
 
                       {/* Score Label */}
-                      <span className="font-space font-normal text-[10px] text-text-muted uppercase tracking-wider block mt-1 leading-none">
+                      <span className="font-space font-normal text-[10px] text-[#94a3b8] uppercase tracking-wider block mt-1 leading-none">
                         {topper.label}
                       </span>
                     </div>
                   ))}
 
                   {/* Placeholder Card for update */}
-                  <div className="bg-bg-card/40 border border-dashed border-border-subtle rounded-xl p-6 flex flex-col items-center justify-center text-center text-text-muted h-full min-h-[200px] w-full">
+                  <div className="bg-[#f8fafc]/40 border border-dashed border-[#e2e8f0] rounded-xl p-6 flex flex-col items-center justify-center text-center text-[#94a3b8] h-full min-h-[200px] w-full">
                     <span className="font-space text-xs tracking-wider uppercase font-medium text-accent-orange/60 mb-2">
                       Results Update
                     </span>
@@ -188,7 +196,7 @@ export default function Toppers() {
           <div className="w-5 h-5 rounded-full bg-accent-orange/10 border border-accent-orange/20 flex items-center justify-center">
             <Check size={12} className="text-accent-orange font-bold" />
           </div>
-          <span className="font-space text-[13px] text-text-muted">
+          <span className="font-space text-[13px] text-[#94a3b8]">
             Above results are verified from official marksheets and admit cards.
           </span>
         </div>

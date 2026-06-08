@@ -60,7 +60,7 @@ export default function WhySSI() {
   const isInView = useInView(listRef, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative border-t border-border-subtle/20">
+    <section className="bg-bg-primary border-b border-[#e2e8f0] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1000px] mx-auto">
         <div className="text-center mb-16">
           {/* Section Label */}
@@ -88,12 +88,12 @@ export default function WhySSI() {
               <motion.div
                 key={usp.num}
                 variants={rowVariants}
-                className={`flex items-center gap-6 md:gap-10 py-6 md:py-8 px-4 md:px-8 border-b transition-colors duration-300 group ${
+                className={`flex items-center gap-6 md:gap-10 py-8 px-4 md:px-8 border-b transition-colors duration-300 group ${
                   isLast ? 'border-b-0' : 'border-b-border-subtle'
                 } hover:bg-bg-card rounded-xl`}
               >
-                {/* Number (Left) */}
-                <span className="font-space font-bold text-[clamp(48px,6vw,72px)] text-bg-card leading-none select-none tracking-tighter group-hover:text-accent-orange transition-colors duration-300 shrink-0 min-w-[70px] md:min-w-[90px] text-center">
+                {/* Number (Left) - 120px background scale */}
+                <span className="font-space font-bold text-[80px] md:text-[120px] text-bg-card leading-none select-none tracking-tighter group-hover:text-accent-orange transition-colors duration-300 shrink-0 min-w-[90px] md:min-w-[150px] text-center">
                   {usp.num}
                 </span>
 

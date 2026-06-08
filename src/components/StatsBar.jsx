@@ -32,7 +32,7 @@ function CountUp({ end, duration = 1.8 }) {
   const suffix = end.replace(/[0-9]/g, '');
 
   return (
-    <span ref={ref} className="font-space font-bold text-accent-orange text-[32px] md:text-[48px] leading-none">
+    <span ref={ref} className="font-space font-bold text-accent-orange text-[32px] md:text-[48px] leading-none" style={{ textShadow: '0 0 40px rgba(249,115,22,0.4)' }}>
       {count}{suffix}
     </span>
   );
@@ -47,7 +47,7 @@ const statsData = [
 
 export default function StatsBar() {
   return (
-    <section className="bg-bg-primary border-t border-border-subtle py-8 md:py-10 px-5 md:px-6">
+    <section className="bg-bg-primary border-t border-[#334155] border-b border-[#e2e8f0] py-8 md:py-10 px-5 md:px-6">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between items-center gap-6 lg:gap-4 text-center">
           {statsData.map((stat, i) => (
@@ -55,7 +55,7 @@ export default function StatsBar() {
               {/* Stat Card */}
               <div className="flex flex-col items-center justify-center flex-1 min-w-[140px] px-2">
                 <CountUp end={stat.value} />
-                <span className="font-space font-normal text-[11px] md:text-[13px] text-text-secondary uppercase tracking-[0.08em] mt-2 max-w-[200px] text-center leading-tight">
+                <span className="font-space font-normal text-[12px] text-[#64748b] uppercase tracking-[0.08em] mt-2 max-w-[200px] text-center leading-tight">
                   {stat.label}
                 </span>
               </div>

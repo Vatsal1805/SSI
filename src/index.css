@@ -11,11 +11,22 @@ html {
   --bg-card: #1e293b;
   --bg-card-hover: #263347;
   --accent-orange: #f97316;
+  --accent-orange-soft: #fb923c;
   --accent-orange-hover: #ea6c0a;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
   --border-subtle: #334155;
+
+  /* Light section tokens */
+  --bg-light: #ffffff;
+  --bg-light-card: #f8fafc;
+  --bg-light-card-hover: #f1f5f9;
+  --text-on-light-primary: #0f172a;
+  --text-on-light-secondary: #475569;
+  --text-on-light-muted: #94a3b8;
+  --border-light: #e2e8f0;
+  --border-light-hover: #cbd5e1;
 }
 
 body {

@@ -101,7 +101,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative border-t border-border-subtle/20">
+    <section className="bg-[#ffffff] py-20 px-5 md:px-6 relative">
       <div className="max-w-[1100px] mx-auto text-center">
         
         {/* Section Label */}
@@ -110,12 +110,12 @@ export default function Testimonials() {
         </span>
 
         {/* Section Heading */}
-        <h2 className="font-space font-bold text-text-primary text-[clamp(28px,4vw,44px)] leading-tight mb-2">
+        <h2 className="font-space font-bold text-[#0f172a] text-[clamp(28px,4vw,44px)] leading-tight mb-2">
           Hear it from our Students
         </h2>
         
         {/* Subtitle */}
-        <p className="font-space text-text-secondary text-base mb-12">
+        <p className="font-space text-[#475569] text-base mb-12">
           Real students. Real results.
         </p>
 
@@ -129,14 +129,14 @@ export default function Testimonials() {
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:-mx-12 pointer-events-none z-20">
             <button
               onClick={handlePrev}
-              className="w-10 h-10 rounded-full bg-bg-card border border-border-subtle flex items-center justify-center text-text-primary hover:border-accent-orange hover:text-accent-orange transition-colors pointer-events-auto shadow-md"
+              className="w-10 h-10 rounded-full bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#0f172a] hover:bg-[#f97316] hover:text-[#ffffff] transition-all duration-200 pointer-events-auto shadow-sm"
               aria-label="Previous Testimonial"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={handleNext}
-              className="w-10 h-10 rounded-full bg-bg-card border border-border-subtle flex items-center justify-center text-text-primary hover:border-accent-orange hover:text-accent-orange transition-colors pointer-events-auto shadow-md"
+              className="w-10 h-10 rounded-full bg-[#f1f5f9] border border-[#e2e8f0] flex items-center justify-center text-[#0f172a] hover:bg-[#f97316] hover:text-[#ffffff] transition-all duration-200 pointer-events-auto shadow-sm"
               aria-label="Next Testimonial"
             >
               <ChevronRight size={20} />
@@ -153,40 +153,56 @@ export default function Testimonials() {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                className="grid grid-cols-1 md:grid-cols-2 gap-6"
+                className="grid grid-cols-1 md:grid-cols-2 gap-6 will-change-transform"
               >
                 {visibleIndices.map((idx) => {
                   const item = testimonials[idx];
                   return (
                     <div
                       key={item.name}
-                      className="bg-bg-card border border-border-subtle rounded-xl p-6 md:p-8 flex flex-col justify-between text-left shadow-lg shadow-black/10 min-h-[220px]"
+                      className="relative bg-[#ffffff] border border-[#e2e8f0] rounded-xl p-6 md:p-8 flex flex-col justify-between text-left shadow-md hover:shadow-lg transition-all duration-300 min-h-[220px]"
                     >
+                      {/* Decorative Quotation Mark */}
+                      <div
+                        className="absolute top-4 right-6 font-serif pointer-events-none select-none"
+                        style={{
+                          fontSize: '80px',
+                          lineHeight: 1,
+                          color: '#f97316',
+                          opacity: 0.12
+                        }}
+                      >
+                        "
+                      </div>
+
                       {/* Top: 5 Stars */}
-                      <div className="flex gap-1 mb-4">
+                      <div className="flex gap-1 mb-4 z-10">
                         {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={15} className="text-accent-orange fill-accent-orange" />
+                          <Star key={i} size={15} className="text-[#f97316] fill-[#f97316]" />
                         ))}
                       </div>
 
                       {/* Quote */}
-                      <p className="font-space text-text-secondary text-[15px] leading-relaxed italic mb-6">
+                      <p className="font-space text-[#475569] text-[15px] leading-relaxed italic mb-6 z-10">
                         "{item.quote}"
                       </p>
 
+                      {/* Card Divider */}
+                      <div className="w-full border-t border-[#e2e8f0] my-4" />
+
                       {/* Bottom Info */}
-                      <div className="flex items-center gap-3 mt-auto">
+                      <div className="flex items-center gap-3 mt-auto z-10">
                         <Avatar
                           src={item.image}
                           name={item.name}
                           sizeClass="w-10 h-10"
-                          borderClass="border border-border-subtle"
+                          borderClass="border border-[#e2e8f0]"
                           fallbackBg="bg-accent-orange"
                           fallbackText="text-bg-primary"
                         />
                         <div className="text-left">
-                          <h4 className="font-space font-semibold text-sm text-text-primary">{item.name}</h4>
-                          <p className="font-space font-normal text-[11px] md:text-xs text-text-muted mt-0.5">{item.achievement}</p>
+                          <h4 className="font-space font-semibold text-sm text-[#0f172a]">{item.name}</h4>
+                          <p className="font-space font-normal text-[11px] md:text-xs text-[#94a3b8] mt-0.5">{item.achievement}</p>
                         </div>
                       </div>
                     </div>
@@ -207,7 +223,7 @@ export default function Testimonials() {
                 setCurrentIndex(index);
               }}
               className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'w-5 bg-accent-orange' : 'bg-border-subtle'
+                index === currentIndex ? 'w-5 bg-[#f97316]' : 'bg-[#e2e8f0]'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
