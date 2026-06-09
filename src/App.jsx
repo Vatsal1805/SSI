@@ -37,9 +37,9 @@ function App() {
       </div>
       
       {/* Faculty Mentors Section */}
-      <div id="faculty">
+      {/* <div id="faculty">
         <Faculty />
-      </div>
+      </div> */}
       
       {/* Toppers Hall of Fame Section */}
       <div id="results">

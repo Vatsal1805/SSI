@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 
 const tabs = [
-  { id: 'foundation', label: 'Foundation' },
-  { id: 'science', label: 'Science 11-12' },
-  { id: 'commerce', label: 'Commerce' },
+  { id: 'foundation', label: '5th-10th' },
+  { id: 'science', label: '11th-12th Science' },
+  { id: 'commerce', label: '11th-12th Commerce' },
   { id: 'jeeneet', label: 'JEE / NEET' },
   { id: 'gujcet', label: 'GUJCET' }
 ];
@@ -16,6 +16,7 @@ const coursesData = {
     badge: 'EARLY PREP',
     description: 'Build unbreakable academic foundations with concept-first teaching. Early preparation for competitive exams through structured learning paths.',
     tags: ['Concept Building', 'Olympiad Prep', 'Board Excellence'],
+    subjects: ['Mathematics', 'Science', 'English', 'Social Science'],
     details: [
       { label: 'Duration', value: '1 Year' },
       { label: 'Batch Size', value: 'Small batches' },
@@ -31,8 +32,9 @@ const coursesData = {
   science: {
     title: '11th – 12th Science',
     badge: 'PCM / PCB',
-    description: 'Comprehensive Physics, Chemistry & Biology/Mathematics coaching aligned with CBSE/GSEB boards and competitive exam syllabi.',
-    tags: ['PCM / PCB', 'Board + Competitive', 'Weekly Tests'],
+    description: 'Comprehensive Physics, Chemistry, Biology & Mathematics coaching aligned with GSEB/CBSE board guidelines and competitive exam preparation.',
+    tags: ['PCM & PCB Streams', 'Board + Competitive', 'Weekly Mock Exams'],
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology', 'PCM (Group A)', 'PCB (Group B)'],
     details: [
       { label: 'Duration', value: '2 Years' },
       { label: 'Batch Size', value: 'Limited seats' },
@@ -48,8 +50,9 @@ const coursesData = {
   commerce: {
     title: '11th – 12th Commerce',
     badge: 'COMMERCE',
-    description: 'Accounts, Economics, Business Studies and Statistics — expert coaching for board excellence and competitive commerce exams.',
-    tags: ['Accounts', 'Economics', 'BST & Stats'],
+    description: 'Accounts, Economics, Business Studies and Statistics — expert coaching for GSEB & CBSE board excellence.',
+    tags: ['Accounts & Stats', 'Economics & BST', 'Board Excellence'],
+    subjects: ['Accountancy', 'Economics', 'Business Studies', 'Statistics'],
     details: [
       { label: 'Duration', value: '2 Years' },
       { label: 'Batch Size', value: 'Limited seats' },
@@ -67,6 +70,7 @@ const coursesData = {
     badge: 'IIT · MEDICAL',
     description: 'Rigorous JEE and NEET preparation with daily problem solving, mock tests, and mentorship from experienced faculty. Biology-first approach for NEET with AIIMS-level practice.',
     tags: ['2-Year / 1-Year', 'Mock Tests', 'Rank Predictor'],
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
     details: [
       { label: 'Duration', value: '1 or 2 Years' },
       { label: 'Batch Size', value: 'Small batches' },
@@ -86,6 +90,7 @@ const coursesData = {
     badge: 'GUJARAT PATTERN',
     description: 'Targeted GUJCET preparation with Gujarat-pattern MCQ practice, previous year papers, and high-scoring strategy sessions.',
     tags: ['Gujarat Pattern', 'PYQ Practice', 'Score Strategy'],
+    subjects: ['Physics', 'Chemistry', 'Mathematics', 'Biology'],
     details: [
       { label: 'Duration', value: '6 Months / 1 Year' },
       { label: 'Batch Size', value: 'Limited seats' },
@@ -124,19 +129,24 @@ export default function Courses() {
           From foundation to advanced competitive preparation — structured for peak performance.
         </p>
 
-        {/* Tab Switcher */}
-        <div className="flex justify-center mb-12">
-          <div className="flex gap-2.5 overflow-x-auto pb-3 px-2 max-w-full no-scrollbar whitespace-nowrap">
-            {tabs.map((tab) => {
+        {/* Tab Switcher (Responsive Grid on Mobile, Flex Row on Desktop) */}
+        <div className="flex justify-center mb-12 w-full">
+          <div className="grid grid-cols-2 md:flex md:flex-row md:justify-center gap-2.5 w-full max-w-[480px] md:max-w-full px-4 md:px-0">
+            {tabs.map((tab, idx) => {
               const isActive = activeTab === tab.id;
+              const isLastMobile = idx === tabs.length - 1;
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`relative font-space font-medium text-sm rounded-lg py-2.5 px-5 transition-all duration-200 focus:outline-none border ${
+                  className={`relative font-space font-medium text-[13px] md:text-sm rounded-lg py-2.5 px-3 md:px-5 transition-all duration-200 focus:outline-none border ${
+                    isLastMobile 
+                      ? 'col-span-2 w-full md:w-auto md:col-span-1 justify-self-center' 
+                      : 'w-full md:w-auto'
+                  } ${
                     isActive 
                       ? 'text-[#ffffff] border-[#f97316] z-10' 
-                      : 'text-[#475569] border-[#e2e8f0] hover:border-[#cbd5e1] hover:text-[#0f172a] bg-[#f8fafc]'
+                      : 'text-[#475569] border-border-light hover:border-[#cbd5e1] hover:text-[#0f172a] bg-bg-light-card'
                   }`}
                 >
                   {/* Sliding active indicator */}
@@ -163,32 +173,95 @@ export default function Courses() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -15 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="bg-[#f8fafc] border border-[#e2e8f0] border-l-[3px] border-l-[#f97316] rounded-xl p-6 md:p-8 flex flex-col md:flex-row gap-8 text-left transition-all duration-300"
-              style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.08)' }}
+              className="bg-bg-light-card border border-border-light border-l-[3px] border-l-[#f97316] rounded-xl p-6 md:p-8 flex flex-col md:flex-row gap-8 text-left transition-all duration-300"
+              style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.06)' }}
             >
               {/* Left Column (Info) */}
-              <div className="flex-1 flex flex-col">
-                <div className="flex items-center gap-4 mb-4">
-                  {course.icon}
-                  <span className="font-space font-semibold text-[10px] text-[#f97316] bg-[#fff7ed] px-2.5 py-1 rounded border border-[#f97316] tracking-wider uppercase">
-                    {course.badge}
-                  </span>
+              <div className="flex-1 flex flex-col justify-between">
+                <div>
+                  <div className="flex items-center gap-4 mb-4">
+                    {course.icon}
+                    <span className="font-space font-semibold text-[10px] text-[#f97316] bg-accent-orange/10 px-2.5 py-1 rounded border border-accent-orange/20 tracking-wider uppercase">
+                      {course.badge}
+                    </span>
+                  </div>
+                  
+                  <h3 className="font-space font-bold text-[#0f172a] text-xl md:text-2xl mb-3">
+                    {course.title}
+                  </h3>
+                  
+                  <p className="font-space text-[#475569] text-[15px] leading-relaxed mb-6">
+                    {course.description}
+                  </p>
+
+                  {/* Subjects Covered Section (Fills Desktop Empty Space) */}
+                  <div className="mb-6">
+                    <h4 className="font-space font-semibold text-xs text-[#94a3b8] uppercase tracking-wider mb-3">
+                      Subjects Covered
+                    </h4>
+                    {activeTab === 'science' ? (
+                      <div className="grid grid-cols-2 gap-4">
+                        <div>
+                          <h5 className="font-space text-[10px] md:text-xs font-bold text-accent-orange uppercase tracking-wide mb-2.5">
+                            PCM Group (Group A)
+                          </h5>
+                          <div className="flex flex-col gap-2 md:gap-2.5">
+                            {['Physics', 'Chemistry', 'Mathematics'].map((subj) => (
+                              <div 
+                                key={subj} 
+                                className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#0f172a] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5"
+                              >
+                                <svg className="w-3.5 h-3.5 text-accent-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>{subj}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <h5 className="font-space text-[10px] md:text-xs font-bold text-accent-orange uppercase tracking-wide mb-2.5">
+                            PCB Group (Group B)
+                          </h5>
+                          <div className="flex flex-col gap-2 md:gap-2.5">
+                            {['Physics', 'Chemistry', 'Biology'].map((subj) => (
+                              <div 
+                                key={subj} 
+                                className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#0f172a] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5"
+                              >
+                                <svg className="w-3.5 h-3.5 text-accent-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>{subj}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="flex flex-wrap md:flex-col gap-2 md:gap-3">
+                        {course.subjects.map((subj) => (
+                          <div 
+                            key={subj} 
+                            className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#0f172a] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5 animate-fade-in"
+                          >
+                            <svg className="w-3.5 h-3.5 text-accent-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span>{subj}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                
-                <h3 className="font-space font-bold text-[#0f172a] text-xl md:text-2xl mb-3">
-                  {course.title}
-                </h3>
-                
-                <p className="font-space text-[#475569] text-[15px] leading-relaxed mb-6">
-                  {course.description}
-                </p>
 
                 {/* Feature tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="flex flex-wrap gap-2 mt-2">
                   {course.tags.map((tag) => (
                     <span 
                       key={tag} 
-                      className="font-space text-xs text-[#64748b] bg-[#f1f5f9] border border-[#e2e8f0] px-3 py-1.5 rounded-md"
+                      className="font-space text-[11px] text-[#64748b] bg-bg-light border border-border-light px-3 py-1.5 rounded-md"
                     >
                       {tag}
                     </span>
@@ -196,19 +269,24 @@ export default function Courses() {
                 </div>
               </div>
 
-              {/* Right Column (Details) */}
-              <div className="w-full md:w-[320px] bg-[#ffffff] border border-[#e2e8f0] rounded-lg p-5 flex flex-col justify-between">
+              {/* Right Column (Details - Mobile 2x2 Grid, Desktop Vertical List) */}
+              <div className="w-full md:w-[320px] bg-bg-light border border-border-light rounded-lg p-5 flex flex-col justify-between">
                 <div>
                   <h4 className="font-space font-semibold text-xs text-[#94a3b8] uppercase tracking-wider mb-4">
                     Program Structure
                   </h4>
-                  <div className="flex flex-col gap-4">
+                  
+                  {/* Grid on Mobile, List on Desktop */}
+                  <div className="grid grid-cols-2 md:flex md:flex-col gap-3 md:gap-4">
                     {course.details.map((detail) => (
-                      <div key={detail.label} className="border-b border-[#e2e8f0]/60 pb-3 last:border-0 last:pb-0">
-                        <span className="font-space text-xs text-[#94a3b8] block uppercase tracking-wide">
+                      <div 
+                        key={detail.label} 
+                        className="bg-bg-light-card md:bg-transparent border border-border-light md:border-0 md:border-b md:border-border-light/60 p-3 md:p-0 md:pb-3 rounded-lg md:rounded-none last:border-0 last:pb-0 text-left flex flex-col justify-center"
+                      >
+                        <span className="font-space text-[10px] md:text-xs text-[#94a3b8] block uppercase tracking-wide leading-none">
                           {detail.label}
                         </span>
-                        <span className="font-space text-sm font-medium text-[#0f172a] mt-0.5 block">
+                        <span className="font-space text-xs md:text-sm font-semibold text-[#0f172a] mt-1.5 block leading-tight">
                           {detail.value}
                         </span>
                       </div>
@@ -216,11 +294,11 @@ export default function Courses() {
                   </div>
                 </div>
 
-                {/* Card CTA inside the card, right-aligned on bottom */}
-                <div className="mt-8 flex items-center justify-end">
+                {/* Card CTA inside the card, full-width on mobile */}
+                <div className="mt-6 md:mt-8 flex items-center justify-end w-full">
                   <a
                     href="#admissions"
-                    className="bg-[#f97316] text-[#ffffff] font-space font-semibold text-xs md:text-sm rounded-lg px-5 py-3 hover:bg-[#ea6c0a] transition-all flex items-center gap-1 group shadow-md shadow-accent-orange/10"
+                    className="bg-[#f97316] text-[#ffffff] font-space font-semibold text-xs md:text-sm rounded-lg px-5 py-3 hover:bg-[#ea6c0a] transition-all flex items-center gap-1 group shadow-md shadow-accent-orange/10 w-full md:w-auto justify-center"
                   >
                     <span>Reserve Your Seat</span>
                     <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
