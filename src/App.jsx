@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials';
 import Gallery from './components/Gallery';
 import Admissions from './components/Admissions';
 import Branches from './components/Branches';
+import EnquiryMap from './components/EnquiryMap';
 import CTAFooter from './components/CTAFooter';
 import WhatsAppWidget from './components/WhatsAppWidget';
 
@@ -67,6 +68,11 @@ function App() {
       {/* Branches Locations Section */}
       <div id="branches">
         <Branches />
+      </div>
+      
+      {/* Enquiry Form and Location Map Section */}
+      <div id="admissions">
+        <EnquiryMap />
       </div>
       
       {/* CTA strip and footer */}

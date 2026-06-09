@@ -4,13 +4,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navLinks = [
   { name: 'Home', href: '#home' },
-  { name: 'About Us', href: '#about-us' },
   { name: 'Courses', href: '#courses' },
-  { name: 'Faculty', href: '#faculty' },
-  { name: 'Results', href: '#results' },
-  { name: 'Why Us', href: '#why-us' },
-  { name: 'Gallery', href: '#gallery' },
-  { name: 'Contact', href: '#branches' }
+  { name: 'About Us', href: '#about-us' },
+  { name: 'Results', href: '#results' }
 ];
 
 export default function Navbar() {

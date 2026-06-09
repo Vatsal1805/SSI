@@ -91,12 +91,11 @@ export default function CTAFooter() {
             </h4>
             <div className="flex flex-col gap-2.5">
               {[
-                { name: 'JEE Main & Advanced', href: '#courses' },
-                { name: 'NEET UG', href: '#courses' },
-                { name: 'GUJCET', href: '#courses' },
+                { name: 'Foundation 5th–10th', href: '#courses' },
                 { name: '11th–12th Science', href: '#courses' },
                 { name: '11th–12th Commerce', href: '#courses' },
-                { name: 'Foundation 5th–10th', href: '#courses' }
+                { name: 'JEE / NEET', href: '#courses' },
+                { name: 'GUJCET', href: '#courses' }
               ].map((link) => (
                 <a
                   key={link.name}

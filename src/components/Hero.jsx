@@ -109,7 +109,8 @@ export default function Hero() {
           className="font-['Mukta'] font-bold leading-tight mb-6"
           style={{ fontSize: "clamp(40px, 6vw, 72px)" }}
         >
-          <span className="text-[#f8fafc]">SUCCESS की शुरुआत,</span>
+          <span className="text-[#f97316]">SUCCESS</span>
+          <span className="text-[#f8fafc]"> की शुरुवात,</span>
           <br />
           <span className="text-[#f8fafc]">सिर्फ </span>
           <span className="text-[#f97316]">EXPERTS</span>
@@ -128,7 +129,7 @@ export default function Hero() {
         {/* Buttons */}
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row items-center gap-3 mb-12 w-full sm:w-auto"
+          className="flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto"
         >
           <motion.button
             whileHover={{ scale: 1.03 }}
@@ -144,50 +145,6 @@ export default function Hero() {
           >
             View Results
           </motion.button>
-        </motion.div>
-
-        {/* Micro stats */}
-        <motion.div
-          variants={itemVariants}
-          className="flex items-center gap-6"
-        >
-
-          {/* Stat 1 */}
-          <div className="flex flex-col items-center">
-            <span className="font-['Space_Grotesk'] font-semibold text-[18px] text-[#f8fafc]">
-              99.41 PR
-            </span>
-            <span className="font-['Space_Grotesk'] text-[11px] text-[#64748b] uppercase tracking-[0.08em] mt-1">
-              12TH BOARD 2026
-            </span>
-          </div>
-
-          {/* Divider */}
-          <div className="w-px h-8 bg-[#334155]" />
-
-          {/* Stat 2 */}
-          <div className="flex flex-col items-center">
-            <span className="font-['Space_Grotesk'] font-semibold text-[18px] text-[#f8fafc]">
-              AIR 3371
-            </span>
-            <span className="font-['Space_Grotesk'] text-[11px] text-[#64748b] uppercase tracking-[0.08em] mt-1">
-              JEE ADVANCED 2026
-            </span>
-          </div>
-
-          {/* Divider */}
-          <div className="w-px h-8 bg-[#334155]" />
-
-          {/* Stat 3 */}
-          <div className="flex flex-col items-center">
-            <span className="font-['Space_Grotesk'] font-semibold text-[18px] text-[#f8fafc]">
-              4.7★
-            </span>
-            <span className="font-['Space_Grotesk'] text-[11px] text-[#64748b] uppercase tracking-[0.08em] mt-1">
-              213 REVIEWS
-            </span>
-          </div>
-
         </motion.div>
 
       </motion.div>
