@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Check } from 'lucide-react';
+import { Check, ChevronRight } from 'lucide-react';
 import Avatar from './Avatar';
 
 const boardToppers = [
@@ -13,11 +13,11 @@ const competitiveToppers = [
   { name: 'Jiya Panchal', exam: 'NEET UG 2026', score: '675 / 720', label: 'NEET SCORE', image: 'Jiya.png' }
 ];
 
-export default function Toppers() {
+export default function Toppers({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('board');
 
   return (
-    <section className="bg-bg-light py-16 md:py-24 px-5 md:px-6 relative border-b border-[#334155]">
+    <section className="bg-bg-light py-16 md:py-24 px-5 md:px-6 relative border-b border-[#263266]">
       <div className="max-w-[1280px] mx-auto text-center">
         
         {/* Section Label */}
@@ -26,7 +26,7 @@ export default function Toppers() {
         </span>
 
         {/* Section Heading */}
-        <h2 className="font-space font-bold text-[#0f172a] text-[clamp(28px,4vw,44px)] leading-tight mb-8">
+        <h2 className="font-space font-bold text-[#131B3A] text-[clamp(28px,4vw,44px)] leading-tight mb-8">
           Our Toppers
         </h2>
 
@@ -37,7 +37,7 @@ export default function Toppers() {
             className={`font-space font-medium text-xs md:text-sm tracking-wider uppercase py-2.5 px-6 rounded-lg transition-colors border duration-200 ${
               activeTab === 'board'
                 ? 'bg-[#f97316] border-[#f97316] text-[#ffffff] font-semibold'
-                : 'bg-bg-light-card border-border-light text-[#475569] hover:border-[#cbd5e1] hover:text-[#0f172a]'
+                : 'bg-bg-light-card border-border-light text-[#475569] hover:border-[#cbd5e1] hover:text-[#131B3A]'
             }`}
           >
             12th Science 2026
@@ -48,7 +48,7 @@ export default function Toppers() {
             className={`font-space font-medium text-xs md:text-sm tracking-wider uppercase py-2.5 px-6 rounded-lg transition-colors border duration-200 ${
               activeTab === 'competitive'
                 ? 'bg-[#f97316] border-[#f97316] text-[#ffffff] font-semibold'
-                : 'bg-bg-light-card border-border-light text-[#475569] hover:border-[#cbd5e1] hover:text-[#0f172a]'
+                : 'bg-bg-light-card border-border-light text-[#475569] hover:border-[#cbd5e1] hover:text-[#131B3A]'
             }`}
           >
             JEE / NEET 2026
@@ -96,7 +96,7 @@ export default function Toppers() {
                     />
 
                     {/* Name */}
-                    <h3 className="font-space font-semibold text-[#0f172a] text-[16px] md:text-lg leading-snug mb-1.5">
+                    <h3 className="font-space font-semibold text-[#131B3A] text-[16px] md:text-lg leading-snug mb-1.5">
                       {topper.name}
                     </h3>
 
@@ -148,7 +148,7 @@ export default function Toppers() {
                     />
 
                     {/* Name */}
-                    <h3 className="font-space font-semibold text-[#0f172a] text-[16px] md:text-lg leading-snug mb-1.5">
+                    <h3 className="font-space font-semibold text-[#131B3A] text-[16px] md:text-lg leading-snug mb-1.5">
                       {topper.name}
                     </h3>
 
@@ -173,8 +173,18 @@ export default function Toppers() {
           </AnimatePresence>
         </div>
 
+        <div className="mt-12 flex justify-center">
+          <button
+            onClick={() => onNavigate && onNavigate('results')}
+            className="inline-flex items-center gap-1.5 bg-[#f97316] text-[#ffffff] font-space font-semibold text-[14px] px-8 py-3.5 rounded-lg hover:bg-[#ea6c0a] transition-all duration-200 shadow-md shadow-accent-orange/10 group"
+          >
+            <span>View Full Achievements Database</span>
+            <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
+          </button>
+        </div>
+
         {/* Verification Bottom Label */}
-        <div className="mt-16 flex items-center justify-center gap-2">
+        <div className="mt-12 flex items-center justify-center gap-2">
           <div className="w-5 h-5 rounded-full bg-accent-orange/10 border border-accent-orange/20 flex items-center justify-center">
             <Check size={12} className="text-accent-orange font-bold" />
           </div>

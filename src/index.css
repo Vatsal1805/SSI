@@ -7,22 +7,22 @@ html {
 }
 
 :root {
-  --bg-primary: #0f172a;
-  --bg-card: #1e293b;
-  --bg-card-hover: #263347;
+  --bg-primary: #131B3A;
+  --bg-card: #1D264F;
+  --bg-card-hover: #27336B;
   --accent-orange: #f97316;
   --accent-orange-soft: #fb923c;
   --accent-orange-hover: #ea6c0a;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --text-muted: #64748b;
-  --border-subtle: #334155;
+  --border-subtle: #263266;
 
   /* Light section tokens */
   --bg-light: #faf9f6;
   --bg-light-card: #f4f3ee;
   --bg-light-card-hover: #eae8de;
-  --text-on-light-primary: #0f172a;
+  --text-on-light-primary: #131B3A;
   --text-on-light-secondary: #475569;
   --text-on-light-muted: #94a3b8;
   --border-light: #e6e4dc;
@@ -43,10 +43,10 @@ body {
 }
 
 .hero-background-pattern {
-  background-color: #0f172a;
+  background-color: #131B3A;
   background-image: 
-    radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, #0f172a 100%),
-    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40L40 0' stroke='%23334155' stroke-width='0.5' fill='none'/%3E%3C/svg%3E");
+    radial-gradient(ellipse 80% 60% at 50% 50%, transparent 30%, #131B3A 100%),
+    url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 40L40 0' stroke='%23263266' stroke-width='0.5' fill='none'/%3E%3C/svg%3E");
   background-size: 100% 100%, 40px 40px;
 }
 

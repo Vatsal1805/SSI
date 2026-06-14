@@ -9,7 +9,7 @@ export default function EnquiryMap() {
   };
 
   return (
-    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative border-b border-[#334155]">
+    <section className="bg-bg-primary py-16 md:py-24 px-5 md:px-6 relative border-b border-[#263266]">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_70%,rgba(249,115,22,0.015),transparent_60%)] pointer-events-none" />
 

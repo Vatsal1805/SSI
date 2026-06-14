@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 
-export default function AboutUs() {
+export default function AboutUs({ onNavigate }) {
   return (
     <section className="bg-bg-light py-20 px-5 md:px-6 relative border-b border-[#cbd5e1]/40">
       <div className="max-w-[1280px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
@@ -134,7 +134,7 @@ export default function AboutUs() {
           </div>
           
           {/* CTA Button */}
-          <div>
+          <div className="flex flex-wrap items-center gap-3">
             <a 
               href="#admissions"
               className="inline-flex items-center gap-1.5 bg-[#f97316] text-[#ffffff] font-space font-semibold text-[14px] px-8 py-3.5 rounded-lg hover:bg-[#ea6c0a] transition-all duration-200 shadow-md shadow-accent-orange/10 group"
@@ -142,6 +142,13 @@ export default function AboutUs() {
               <span>Book a Demo Class</span>
               <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform duration-200" />
             </a>
+            <button
+              onClick={() => onNavigate && onNavigate('about')}
+              className="inline-flex items-center gap-1.5 border border-[#cbd5e1] hover:border-accent-orange hover:bg-white text-text-light-secondary hover:text-accent-orange font-space font-semibold text-[14px] px-8 py-3.5 rounded-lg transition-all duration-200"
+            >
+              <span>Read Our Story</span>
+              <ChevronRight size={16} />
+            </button>
           </div>
           
         </div>

@@ -29,7 +29,7 @@ export default function WhySSI() {
   const isInView = useInView(containerRef, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-bg-primary border-b border-[#334155] py-20 px-5 md:px-6 relative overflow-hidden">
+    <section className="bg-bg-primary border-b border-[#263266] py-20 px-5 md:px-6 relative overflow-hidden">
       
       {/* Background radial overlay */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(249,115,22,0.02),transparent_60%)] pointer-events-none" />

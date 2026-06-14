@@ -29,7 +29,7 @@ const branches = [
 
 export default function Branches() {
   return (
-    <section className="bg-bg-light py-16 md:py-24 px-5 md:px-6 relative border-b border-[#334155]">
+    <section className="bg-bg-light py-16 md:py-24 px-5 md:px-6 relative border-b border-[#263266]">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-16">
           {/* Section Label */}
@@ -38,7 +38,7 @@ export default function Branches() {
           </span>
 
           {/* Section Heading */}
-          <h2 className="font-space font-bold text-[#0f172a] text-[clamp(28px,4vw,44px)] leading-tight mb-4">
+          <h2 className="font-space font-bold text-[#131B3A] text-[clamp(28px,4vw,44px)] leading-tight mb-4">
             Two Prime Branches in Vastral
           </h2>
 
@@ -62,7 +62,7 @@ export default function Branches() {
               </span>
 
               {/* Title */}
-              <h3 className="font-space font-semibold text-[#0f172a] text-xl md:text-2xl mb-4 text-left">
+              <h3 className="font-space font-semibold text-[#131B3A] text-xl md:text-2xl mb-4 text-left">
                 {branch.title}
               </h3>
 

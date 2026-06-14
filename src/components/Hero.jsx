@@ -30,7 +30,7 @@ export default function Hero() {
     >
 
       {/* LAYER 1 — High-Performance WebGL Shader (Active only when visible) / CSS Fallback */}
-      <div className="absolute inset-0 overflow-hidden z-0 bg-[#0f172a]">
+      <div className="absolute inset-0 overflow-hidden z-0 bg-[#131B3A]">
         <div className="absolute inset-0 w-full h-full">
           {isInView ? (
             <MeshGradient
@@ -45,12 +45,12 @@ export default function Hero() {
               swirl={0.12}
               speed={0.4}
               colors={[
-                "#0f172a",
-                "#1e3a5f",
-                "#0c1929",
-                "#162844",
-                "#0f172a",
-                "#1a2f4a"
+                "#131B3A",
+                "#1D264F",
+                "#0E132B",
+                "#202D5C",
+                "#131B3A",
+                "#1C2754"
               ]}
             />
           ) : (
@@ -58,11 +58,11 @@ export default function Hero() {
               className="absolute inset-0 w-full h-full opacity-65 pointer-events-none animate-mesh"
               style={{
                 backgroundImage: `
-                  radial-gradient(at 0% 0%, rgba(30, 58, 95, 0.6) 0px, transparent 50%),
-                  radial-gradient(at 100% 0%, rgba(22, 40, 68, 0.6) 0px, transparent 50%),
-                  radial-gradient(at 100% 100%, rgba(26, 47, 74, 0.6) 0px, transparent 50%),
-                  radial-gradient(at 0% 100%, rgba(12, 25, 41, 0.7) 0px, transparent 50%),
-                  radial-gradient(at 50% 50%, rgba(30, 58, 95, 0.4) 0px, transparent 50%)
+                  radial-gradient(at 0% 0%, rgba(29, 38, 79, 0.6) 0px, transparent 50%),
+                  radial-gradient(at 100% 0%, rgba(20, 29, 60, 0.6) 0px, transparent 50%),
+                  radial-gradient(at 100% 100%, rgba(28, 39, 84, 0.6) 0px, transparent 50%),
+                  radial-gradient(at 0% 100%, rgba(14, 19, 43, 0.7) 0px, transparent 50%),
+                  radial-gradient(at 50% 50%, rgba(29, 38, 79, 0.4) 0px, transparent 50%)
                 `
               }}
             />
@@ -71,7 +71,7 @@ export default function Hero() {
       </div>
 
       {/* LAYER 2 — Dark overlay */}
-      <div className="absolute inset-0 bg-[#0f172a]/40 pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-[#131B3A]/40 pointer-events-none z-[1]" />
 
       {/* LAYER 2.5 — Orange Glow */}
       <div
@@ -134,14 +134,14 @@ export default function Hero() {
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="bg-[#f97316] text-[#0f172a] font-['Space_Grotesk'] font-medium text-[15px] px-7 py-3.5 rounded-lg hover:bg-[#ea6c0a] transition-colors w-full sm:w-auto text-center"
+            className="bg-[#f97316] text-[#131B3A] font-['Space_Grotesk'] font-medium text-[15px] px-7 py-3.5 rounded-lg hover:bg-[#ea6c0a] transition-colors w-full sm:w-auto text-center"
           >
             Explore Programs
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            className="border border-[#334155] text-[#f8fafc] font-['Space_Grotesk'] font-medium text-[15px] px-7 py-3.5 rounded-lg hover:border-[#64748b] hover:bg-[#1e293b] transition-colors w-full sm:w-auto text-center"
+            className="border border-[#263266] text-[#f8fafc] font-['Space_Grotesk'] font-medium text-[15px] px-7 py-3.5 rounded-lg hover:border-[#64748b] hover:bg-[#1D264F] transition-colors w-full sm:w-auto text-center"
           >
             View Results
           </motion.button>

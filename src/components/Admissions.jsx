@@ -36,7 +36,7 @@ export default function Admissions() {
   }, []);
 
   return (
-    <section className="bg-bg-primary border-b border-[#e2e8f0] py-16 md:py-24 px-5 md:px-6 relative">
+    <section className="bg-bg-primary border-b border-[#263266] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1100px] mx-auto">
         <div className="text-center mb-16">
           {/* Section Label */}

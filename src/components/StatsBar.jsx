@@ -47,7 +47,7 @@ const statsData = [
 
 export default function StatsBar() {
   return (
-    <section className="bg-bg-primary border-t border-[#334155] border-b border-[#e2e8f0] py-8 md:py-10 px-5 md:px-6">
+    <section className="bg-bg-primary border-t border-[#263266] border-b border-[#263266] py-8 md:py-10 px-5 md:px-6">
       <div className="max-w-[1280px] mx-auto">
         <div className="grid grid-cols-2 lg:flex lg:flex-row lg:justify-between items-center gap-6 lg:gap-4 text-center">
           {statsData.map((stat, i) => (

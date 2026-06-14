@@ -78,7 +78,7 @@ export default function Testimonials() {
         </span>
 
         {/* Section Heading */}
-        <h2 className="font-space font-bold text-[#0f172a] text-[clamp(28px,4vw,44px)] leading-tight mb-12">
+        <h2 className="font-space font-bold text-[#131B3A] text-[clamp(28px,4vw,44px)] leading-tight mb-12">
           Our Student Stories That <span className="text-accent-orange">Inspire You!</span>
         </h2>
 
@@ -92,14 +92,14 @@ export default function Testimonials() {
           <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between px-2 md:-mx-14 pointer-events-none z-20">
             <button
               onClick={handlePrev}
-              className="w-11 h-11 rounded-full bg-bg-light border border-border-light flex items-center justify-center text-[#0f172a] hover:bg-accent-orange hover:text-[#ffffff] hover:border-accent-orange transition-all duration-200 pointer-events-auto shadow-md"
+              className="w-11 h-11 rounded-full bg-bg-light border border-border-light flex items-center justify-center text-[#131B3A] hover:bg-accent-orange hover:text-[#ffffff] hover:border-accent-orange transition-all duration-200 pointer-events-auto shadow-md"
               aria-label="Previous Testimonial"
             >
               <ChevronLeft size={20} />
             </button>
             <button
               onClick={handleNext}
-              className="w-11 h-11 rounded-full bg-bg-light border border-border-light flex items-center justify-center text-[#0f172a] hover:bg-accent-orange hover:text-[#ffffff] hover:border-accent-orange transition-all duration-200 pointer-events-auto shadow-md"
+              className="w-11 h-11 rounded-full bg-bg-light border border-border-light flex items-center justify-center text-[#131B3A] hover:bg-accent-orange hover:text-[#ffffff] hover:border-accent-orange transition-all duration-200 pointer-events-auto shadow-md"
               aria-label="Next Testimonial"
             >
               <ChevronRight size={20} />

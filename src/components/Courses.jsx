@@ -105,13 +105,13 @@ const coursesData = {
   }
 };
 
-export default function Courses() {
+export default function Courses({ onNavigate }) {
   const [activeTab, setActiveTab] = useState('foundation');
 
   const course = coursesData[activeTab];
 
   return (
-    <section className="bg-bg-light border-b border-[#334155] py-16 md:py-24 px-5 md:px-6 relative">
+    <section className="bg-bg-light border-b border-[#263266] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1280px] mx-auto text-center">
         
         {/* Section Label */}
@@ -120,7 +120,7 @@ export default function Courses() {
         </span>
 
         {/* Section Heading */}
-        <h2 className="font-space font-bold text-[#0f172a] text-[clamp(28px,4vw,44px)] leading-tight mb-4">
+        <h2 className="font-space font-bold text-[#131B3A] text-[clamp(28px,4vw,44px)] leading-tight mb-4">
           Courses Designed to Win
         </h2>
 
@@ -146,7 +146,7 @@ export default function Courses() {
                   } ${
                     isActive 
                       ? 'text-[#ffffff] border-[#f97316] z-10' 
-                      : 'text-[#475569] border-border-light hover:border-[#cbd5e1] hover:text-[#0f172a] bg-bg-light-card'
+                      : 'text-[#475569] border-border-light hover:border-[#cbd5e1] hover:text-[#131B3A] bg-bg-light-card'
                   }`}
                 >
                   {/* Sliding active indicator */}
@@ -186,7 +186,7 @@ export default function Courses() {
                     </span>
                   </div>
                   
-                  <h3 className="font-space font-bold text-[#0f172a] text-xl md:text-2xl mb-3">
+                  <h3 className="font-space font-bold text-[#131B3A] text-xl md:text-2xl mb-3">
                     {course.title}
                   </h3>
                   
@@ -209,7 +209,7 @@ export default function Courses() {
                             {['Physics', 'Chemistry', 'Mathematics'].map((subj) => (
                               <div 
                                 key={subj} 
-                                className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#0f172a] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5"
+                                className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#131B3A] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5"
                               >
                                 <svg className="w-3.5 h-3.5 text-accent-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
@@ -227,7 +227,7 @@ export default function Courses() {
                             {['Physics', 'Chemistry', 'Biology'].map((subj) => (
                               <div 
                                 key={subj} 
-                                className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#0f172a] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5"
+                                className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#131B3A] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5"
                               >
                                 <svg className="w-3.5 h-3.5 text-accent-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
@@ -243,7 +243,7 @@ export default function Courses() {
                         {course.subjects.map((subj) => (
                           <div 
                             key={subj} 
-                            className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#0f172a] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5 animate-fade-in"
+                            className="font-space text-[11px] md:text-[14px] font-medium text-accent-orange md:text-[#131B3A] bg-accent-orange/5 md:bg-transparent border border-accent-orange/20 md:border-0 px-3 md:px-0 py-1.5 md:py-0.5 rounded-md md:rounded-none flex items-center gap-1.5 md:gap-2.5 animate-fade-in"
                           >
                             <svg className="w-3.5 h-3.5 text-accent-orange shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" />
@@ -286,7 +286,7 @@ export default function Courses() {
                         <span className="font-space text-[10px] md:text-xs text-[#94a3b8] block uppercase tracking-wide leading-none">
                           {detail.label}
                         </span>
-                        <span className="font-space text-xs md:text-sm font-semibold text-[#0f172a] mt-1.5 block leading-tight">
+                        <span className="font-space text-xs md:text-sm font-semibold text-[#131B3A] mt-1.5 block leading-tight">
                           {detail.value}
                         </span>
                       </div>
@@ -295,14 +295,21 @@ export default function Courses() {
                 </div>
 
                 {/* Card CTA inside the card, full-width on mobile */}
-                <div className="mt-6 md:mt-8 flex items-center justify-end w-full">
+                <div className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-end gap-3.5 w-full">
                   <a
                     href="#admissions"
-                    className="bg-[#f97316] text-[#ffffff] font-space font-semibold text-xs md:text-sm rounded-lg px-5 py-3 hover:bg-[#ea6c0a] transition-all flex items-center gap-1 group shadow-md shadow-accent-orange/10 w-full md:w-auto justify-center"
+                    className="bg-[#f97316] text-[#ffffff] font-space font-semibold text-xs md:text-sm rounded-lg px-5 py-3 hover:bg-[#ea6c0a] transition-all flex items-center gap-1 group shadow-md shadow-accent-orange/10 w-full sm:w-auto justify-center animate-fade-in"
                   >
                     <span>Reserve Your Seat</span>
                     <ChevronRight size={16} className="transform group-hover:translate-x-1 transition-transform" />
                   </a>
+                  <button
+                    onClick={() => onNavigate && onNavigate('courses')}
+                    className="border border-[#cbd5e1] hover:border-accent-orange text-text-light-secondary hover:text-accent-orange hover:bg-white font-space font-semibold text-xs md:text-sm rounded-lg px-5 py-3 transition-all flex items-center justify-center gap-1 w-full sm:w-auto"
+                  >
+                    <span>Explore All Courses</span>
+                    <ChevronRight size={16} />
+                  </button>
                 </div>
               </div>
 

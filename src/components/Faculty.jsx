@@ -38,7 +38,7 @@ export default function Faculty() {
   const isInView = useInView(containerRef, { once: true, margin: '-100px' });
 
   return (
-    <section className="bg-bg-primary border-b border-[#e2e8f0] py-16 md:py-24 px-5 md:px-6 relative">
+    <section className="bg-bg-primary border-b border-[#263266] py-16 md:py-24 px-5 md:px-6 relative">
       <div className="max-w-[1280px] mx-auto text-center">
         
         {/* Section Label */}
@@ -79,10 +79,10 @@ export default function Faculty() {
                 name={mentor.name}
                 sizeClass="w-[100px] h-[100px]"
                 textClass="text-xl font-semibold"
-                borderClass="border-[3px] border-[#1e293b] group-hover:border-[#f97316] transition-all duration-300"
+                borderClass="border-[3px] border-[#1D264F] group-hover:border-[#f97316] transition-all duration-300"
                 fallbackBg="bg-bg-primary"
                 fallbackText="text-accent-orange"
-                className="mb-4 border-[3px] border-[#1e293b] group-hover:border-[#f97316] transition-all duration-300"
+                className="mb-4 border-[3px] border-[#1D264F] group-hover:border-[#f97316] transition-all duration-300"
               />
 
               {/* Name */}
