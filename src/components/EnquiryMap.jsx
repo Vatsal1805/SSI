@@ -117,7 +117,7 @@ export default function EnquiryMap() {
           <div className="lg:col-span-5 flex flex-col gap-6">
             
             {/* Quick Contacts Panel */}
-            <div className="bg-bg-card border border-border-subtle rounded-2xl p-6 text-left flex flex-col gap-4 shadow-md">
+            <div className="hidden lg:flex bg-bg-card border border-border-subtle rounded-2xl p-6 text-left flex-col gap-4 shadow-md">
               <h3 className="font-space font-bold text-text-primary text-lg mb-1">
                 Reach Us Directly
               </h3>

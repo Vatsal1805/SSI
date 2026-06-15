@@ -80,3 +80,8 @@ body {
   animation: gradient-flow 25s ease infinite;
   will-change: background-position;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}

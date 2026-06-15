@@ -39,7 +39,7 @@ export default function Branches() {
 
           {/* Section Heading */}
           <h2 className="font-space font-bold text-[#131B3A] text-[clamp(28px,4vw,44px)] leading-tight mb-4">
-            Two Prime Branches in Vastral
+            Two Prime Branches
           </h2>
 
           {/* Subtitle */}

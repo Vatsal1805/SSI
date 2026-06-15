@@ -27,7 +27,7 @@ export default function Avatar({
   // Format absolute image URL
   let imageUrl = src;
   if (src && !src.startsWith('http://') && !src.startsWith('https://') && !src.startsWith('data:')) {
-    imageUrl = `https://shreesaiinstitute.in/images/${src}`;
+    imageUrl = `https://www.shreesaiinstitute.in/images/${src}`;
   }
 
   if (error || !src) {

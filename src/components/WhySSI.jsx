@@ -62,14 +62,16 @@ export default function WhySSI() {
             className="md:col-span-2 bg-bg-card border border-border-subtle hover:border-accent-orange rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 transition-[border-color,box-shadow,background-color] duration-300 hover:shadow-xl hover:shadow-accent-orange/5 group"
           >
             <div className="text-left max-w-[420px]">
-              <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-4-9 4 9 5zm0 0l-9-4.243V17a4 4 0 004 4h10a4 4 0 004-4v-7.243L12 14z" />
-                </svg>
+              <div className="flex flex-row items-center gap-3 mb-4 md:flex-col md:items-start md:gap-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange shrink-0 md:mb-4">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 14l9-5-9-4-9 4 9 5zm0 0l-9-4.243V17a4 4 0 004 4h10a4 4 0 004-4v-7.243L12 14z" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-text-primary text-lg sm:text-xl">
+                  Expert Faculty
+                </h3>
               </div>
-              <h3 className="font-space font-bold text-text-primary text-xl mb-2">
-                Expert Faculty
-              </h3>
               <p className="font-space text-text-secondary text-sm leading-relaxed">
                 Well-experienced team of engineers and highly qualified professionals with a 16+ year average experience in academic coaching and leadership.
               </p>
@@ -93,14 +95,16 @@ export default function WhySSI() {
             className="md:col-span-1 bg-bg-card border border-border-subtle hover:border-accent-orange rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6 transition-[border-color,box-shadow,background-color] duration-300 hover:shadow-xl hover:shadow-accent-orange/5 group"
           >
             <div className="text-left">
-              <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                </svg>
+              <div className="flex flex-row items-center gap-3 mb-4 md:flex-col md:items-start md:gap-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange shrink-0 md:mb-4">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-text-primary text-lg sm:text-xl">
+                  Personal Learning App
+                </h3>
               </div>
-              <h3 className="font-space font-bold text-text-primary text-xl mb-2">
-                Personal Learning App
-              </h3>
               <p className="font-space text-text-secondary text-sm leading-relaxed">
                 Dedicated student-parent application. Get instant access to daily reports, attendance tracking, and premium PYQ materials.
               </p>
@@ -123,14 +127,16 @@ export default function WhySSI() {
             className="md:col-span-1 bg-bg-card border border-border-subtle hover:border-accent-orange rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6 transition-[border-color,box-shadow,background-color] duration-300 hover:shadow-xl hover:shadow-accent-orange/5 group"
           >
             <div className="text-left">
-              <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+              <div className="flex flex-row items-center gap-3 mb-4 md:flex-col md:items-start md:gap-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange shrink-0 md:mb-4">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-text-primary text-lg sm:text-xl">
+                  Smart Classrooms
+                </h3>
               </div>
-              <h3 className="font-space font-bold text-text-primary text-xl mb-2">
-                Smart Classrooms
-              </h3>
               <p className="font-space text-text-secondary text-sm leading-relaxed">
                 Digital interactive boards, concept animations, and smart study spaces for deep understanding.
               </p>
@@ -165,14 +171,16 @@ export default function WhySSI() {
             className="md:col-span-2 bg-bg-card border border-border-subtle hover:border-accent-orange rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 transition-[border-color,box-shadow,background-color] duration-300 hover:shadow-xl hover:shadow-accent-orange/5 group"
           >
             <div className="text-left max-w-[420px]">
-              <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
-                </svg>
+              <div className="flex flex-row items-center gap-3 mb-4 md:flex-col md:items-start md:gap-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange shrink-0 md:mb-4">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-text-primary text-lg sm:text-xl">
+                  Weekly Tests & Doubt Solving
+                </h3>
               </div>
-              <h3 className="font-space font-bold text-text-primary text-xl mb-2">
-                Weekly Tests & Doubt Solving
-              </h3>
               <p className="font-space text-text-secondary text-sm leading-relaxed">
                 Regular exam-pattern tests with diagnostic reports, paired with daily doubt-solving support via WhatsApp to keep study momentum high.
               </p>
@@ -225,14 +233,16 @@ export default function WhySSI() {
             className="md:col-span-1 bg-bg-card border border-border-subtle hover:border-accent-orange rounded-2xl p-6 md:p-8 flex flex-col justify-between gap-6 transition-[border-color,box-shadow,background-color] duration-300 hover:shadow-xl hover:shadow-accent-orange/5 group"
           >
             <div className="text-left">
-              <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                </svg>
+              <div className="flex flex-row items-center gap-3 mb-4 md:flex-col md:items-start md:gap-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange shrink-0 md:mb-4">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-text-primary text-lg sm:text-xl">
+                  In-House Practice Books
+                </h3>
               </div>
-              <h3 className="font-space font-bold text-text-primary text-xl mb-2">
-                In-House Practice Books
-              </h3>
               <p className="font-space text-text-secondary text-sm leading-relaxed">
                 Authored by SSI specialists for 9th–12th. Rigorous material optimized for Boards & competitive exams (JEE, NEET, GUJCET).
               </p>
@@ -255,15 +265,17 @@ export default function WhySSI() {
             className="md:col-span-2 bg-bg-card border border-border-subtle hover:border-accent-orange rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 transition-[border-color,box-shadow,background-color] duration-300 hover:shadow-xl hover:shadow-accent-orange/5 group"
           >
             <div className="text-left max-w-[420px]">
-              <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange mb-4">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
+              <div className="flex flex-row items-center gap-3 mb-4 md:flex-col md:items-start md:gap-0">
+                <div className="w-10 h-10 rounded-lg bg-accent-orange/10 flex items-center justify-center text-accent-orange shrink-0 md:mb-4">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                  </svg>
+                </div>
+                <h3 className="font-space font-bold text-text-primary text-lg sm:text-xl">
+                  Parent Reporting
+                </h3>
               </div>
-              <h3 className="font-space font-bold text-text-primary text-xl mb-2">
-                Parent Reporting
-              </h3>
               <p className="font-space text-text-secondary text-sm leading-relaxed">
                 Monthly performance reports and attendance logs shared directly with parents to ensure complete transparency.
               </p>
